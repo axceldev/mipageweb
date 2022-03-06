@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
+/*ajuste de manera global*/
 :root{
     --green: #0c443a;
     --ligth-green: #25d1b2;
@@ -24,7 +25,7 @@
 
 html{
     font-size: 62.4%;
-    overflow: hidden;
+    overflow:auto;
 }
 
 
@@ -69,6 +70,9 @@ section{
     padding: 1rem;
 }
 
+
+/*ENCABEZADO*/
+
 header{
     position: fixed;
     top: 0;
@@ -82,7 +86,6 @@ header{
     justify-content: space-between;
     z-index: 1000;
 }
-
 
 header .logo{
     font-size: 2rem;
@@ -115,6 +118,7 @@ header label{
     opacity: 0;
 }
 
+/*INICIO*/
 
 .init{
     display: flex;
@@ -123,7 +127,6 @@ header label{
     background: url(../img/inicio_fondo.png) no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .init .image img{
@@ -148,6 +151,12 @@ header label{
     padding: 1rem 0;
 }
 
+/*QUIENES SOMOS*/
+
+.about{
+    background: white;
+}
+
 .about .content-box{
     display: flex;
     align-items: center;
@@ -156,6 +165,59 @@ header label{
 }
 
 .about .content-box .box{
+    background: white;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    flex: 1 1 40rem;
+    border-radius: .5rem;
+}
+
+.about .content-box .box  .user img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 8rem;
+    width: 8rem;
+    margin-top: 2rem;
+}
+
+.about .content-box .box  .user h3{
+    color: var(--green);
+    font-size: 2rem;
+
+}
+
+.about .content-box .box .description{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+}
+
+
+/*PRODUCTOS*/
+
+.product{
+    background: white;
+}
+
+.imgs:hover{
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+}
+
+
+.product .content-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow:hidden
+}
+
+.product .content-box .box{
     flex: 1 1 30rem;
     background: white;
     border-radius: .5rem;
@@ -168,21 +230,138 @@ header label{
     transition: .2s linear;
 }
 
-.about .content-box .box h3{
+.product .content-box .box img{
+    height: 15rem;
+}
+
+.product .content-box .box img:hover{
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+}
+.product .content-box .box img{
+    transition: all .3s linear;
+}
+
+.product .content-box .box h3{
     font-size: 2rem;
     color: #333;
     padding-top: 1rem;
 }
 
 
-.about .content-box .box p{
+.product .content-box .box p{
     font-size: 1.3rem;
     color: #666;
     padding: 1rem 0;
     
 }
 
+/*contactos*/
 
+.contact{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+}
+
+.contact .image{
+    flex: 1 1 40rem;
+}
+
+.contact .image img{
+    width: 75%;
+    padding: 2rem;
+}
+
+.contact form{
+    flex: 1 1 40rem;  
+    padding: 2rem 3rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: white; 
+}
+
+.contact .heading{
+    text-align: left;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+
+.contact form .inputbox{
+    position: relative;
+}
+
+.contact form .inputbox input, .contact form .inputbox textarea{
+    width:  100%;
+    background: none;
+    color: #333;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
+    text-transform: none;
+}
+
+.contact form .inputbox textarea{
+    resize: none;
+    height: 13rem;
+}
+.contact form .inputbox label{
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    font-size: 1.7rem;
+    color: #666;
+    transition: .2s linear;
+}
+
+.contact form .inputbox input:focus ~ label,
+.contact form .inputbox input:valid ~ label,
+.contact form .inputbox textarea:focus ~ label,
+.contact form .inputbox textarea:valid ~ label
+{
+    top: -.5rem;
+    font-size: 1.5rem;
+    color: var(--ligth-green);
+    
+}
+
+
+
+/*subir archivo*/
+.input-file{
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin: .1rem;
+    padding: .1rem;
+    width: 170px;
+    background-color: var(--ligth-green);
+    border-radius: 5rem;
+}
+
+.input-file p{
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.input-file .btn-file{
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+/*Responsivo*/
 @keyframes float{
     0%, 100%{
         transform: translateY(0rem)
