@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!--ENCABEZADO-->
     <header>
         <a href="#init" class="logo">
             <span>COURSE</span>WEB
@@ -22,6 +23,8 @@
         <a href="#contact">Contactanos</a>
     </nav>
     </header>
+
+    <!--INICIO-->
     <section class="init" id="init">
         <div class="content">
             <h3>APLICACIONES <span>WEB</span></h3>
@@ -32,6 +35,8 @@
             <img src="img/dev-web.png" alt="">
         </div>
     </section>
+
+    <!--QUIENES SOMOS-->
     <section class="about" id="about">   
         <h1 class="heading">QUIENES SOMOS</h1>
         <div class="content-box">
@@ -76,6 +81,8 @@
             </div>
         </div>
     </section>
+
+    <!--PRODUCTOS-->
     <section class="product" id="product">
         <h1 class="heading">Cursos</h1>
         <div class="content-box">
@@ -131,6 +138,8 @@
             </div>
         </div>
     </section>
+
+    <!--CONTACTOS-->
     <section class="contact" id="contact">
         <div class="image">
             <img src="img/dev-cont.png" alt="">
@@ -139,27 +148,62 @@
         <form action="send.php">
             <h1 class="heading">Contactanos</h1>
             <div class="inputbox">
-                <input type="text" required>
+                <input type="text" name="name" required>
                 <label for="">Nombre</label>
             </div>
             <div class="inputbox">
-                <input type="email" required>
+                <input type="email" name="email" required>
                 <label for="">Email</label>
             </div>
             <div class="inputbox">
-                <input type="number" required>
+                <input type="number" name="phone" required>
                 <label for="">Teléfono</label>
             </div>
             <div class="inputbox">
-                <textarea name="" id="" cols="30" rows="10" required></textarea>
+                <textarea name="msg" id="" cols="30" rows="10" required></textarea>
                 <label for="">Mensaje</label>
             </div>
             <div class="input-file">
-                <p><i class="fa-solid fa-file-arrow-up"></i> Subir archivo</p>
-                <input type="file" class="btn-file">
+                <p><i class="fa-solid fa-file-arrow-up"></i> Adjuntar archivo</p>
+                <input type="file" name="file" class="btn-file">
             </div>
             <input type="submit" class="btn" value="Enviar">
         </form>
     </section>
+
+    <!--PIE DE PAGINA-->
+    <div class="footer">
+        <div class="content-box">
+            <div class="box">
+                <h3>noticias</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illo repellat distinctio veritatis incidunt enim possimus nihil, assumenda architecto numquam aut, totam fugiat animi? Molestias vitae eligendi cumque. Aliquid, autem.</p>
+            </div>
+            <div class="box">
+                <h3>buscanos en</h3>
+                <a href="#"><i class="fa-brands fa-facebook"></i> facebook</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fa-brands fa-github"></i> github</a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i> twitter</a>
+            </div>
+            <div class="box">
+                <h3>mas información</h3>
+                <div class="info">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <p>1123-12233-444 <br> 123-456-899</p>
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>courseweb@gmail.com</p>
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>la cuidad popayán - colombia</p>
+                </div>
+            </div>
+            <h1 class="credit">
+                &copy, copyrigth @ 2022 cristian bambague unicomfacauca
+            </h1>
+        </div>
+    </div>
 </body>
 </html>
