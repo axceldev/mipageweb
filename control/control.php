@@ -1,9 +1,11 @@
 <?php
-  $v_cad=$_REQUEST["v_cad"];
-  //$archivo = $_SERVER[‘HTTP_HOST’]."data/db.json";
+  $name=$_REQUEST["name"];
+  $email=$_REQUEST["email"];
+  $phone=$_REQUEST["phone"];
+  $msg=$_REQUEST["msg"];
+  $file=$_REQUEST["file"];
   $archivo = "../data/db.json";
-  if (file_exists($archivo)) unlink($archivo);  //Borra el archivo
-  // a+, append para anexar al final del archivo, w+ lectura,escritura puntero al inicio, trunca archivo 
+  if (file_exists($archivo)) unlink($archivo); 
   $puntero = @fopen($archivo, 'a+');   
                                       
   if(!$puntero)
@@ -12,7 +14,11 @@
   }
   else
   {
-	fwrite($puntero, $v_cad, strlen($v_cad));
+	fwrite($puntero, name, strlen(name));
+	fwrite($puntero, email, strlen(email));
+	fwrite($puntero, phone, strlen(phone));
+	fwrite($puntero, msg, strlen(msg));
+	fwrite($puntero, file, strlen(file));
 	echo "OK";
   }
 ?>

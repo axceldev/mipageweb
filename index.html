@@ -148,27 +148,27 @@
             <img src="img/dev-cont.png" alt="">
         </div>
         
-        <form action="send.php">
+        <form action="control/control.php">
             <h1 class="heading">Contactanos</h1>
             <div class="inputbox">
-                <input type="text" name="name" required>
+                <input type="text" name="name" id="name" required>
                 <label for="">Nombre</label>
             </div>
             <div class="inputbox">
-                <input type="email" name="email" required>
+                <input type="email" name="email" id="email" required>
                 <label for="">Email</label>
             </div>
             <div class="inputbox">
-                <input type="number" name="phone" required>
+                <input type="number" name="phone" id="phone" required>
                 <label for="">Teléfono</label>
             </div>
             <div class="inputbox">
-                <textarea name="msg" id="" cols="30" rows="10" required></textarea>
+                <textarea name="msg" id="" cols="30" rows="10" id="msg" required></textarea>
                 <label for="">Mensaje</label>
             </div>
             <div class="input-file">
                 <p><i class="fa-solid fa-file-arrow-up"></i> Adjuntar archivo</p>
-                <input type="file" name="file" class="btn-file">
+                <input type="file" name="file" id="file" class="btn-file">
             </div>
             <input type="submit" class="btn" value="Enviar">
         </form>
